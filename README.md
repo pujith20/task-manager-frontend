@@ -1,36 +1,164 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📝 Task Manager – Project Documentation
+🔍 Project Overview
+Task Manager is a full-stack web application designed to simplify task assignment and management across different user roles like Admin and Manager. It provides real-time updates, a structured dashboard, and essential tools for task tracking and team coordination. The system uses a clean UI with animation support and secure backend integrations.
 
-## Getting Started
+🚀 Live Deployment
+Frontend: https://task-manager-frontend-fvyi.vercel.app
 
-First, run the development server:
+Backend: https://task-manager-backend-emo1.onrender.com
 
-```bash
+🛠️ Features
+User Authentication (Sign up & Login)
+
+Role-Based Access (Admin / Manager)
+
+Task Creation & Assignment
+
+Task List with Filters
+
+Real-Time Notifications via WebSocket
+
+Responsive Design for desktop and mobile
+
+Email Notifications on Task Updates (Optional)
+
+Smooth UI animations for login/dashboard
+
+🧠 Backend
+📌 Technologies Used:
+Node.js
+
+Express.js
+
+MongoDB Atlas (Mongoose)
+
+JWT Authentication
+
+Nodemailer (for email support)
+
+Socket.io (for real-time updates)
+
+dotenv (environment variable management)
+
+🧩 Main Modules:
+server.js – Entry point; sets up HTTP & WebSocket servers.
+
+app.js – Express app instance, routes & middleware config.
+
+routes/ – Auth and task-related API endpoints.
+
+models/ – MongoDB models for User and Task.
+
+middlewares/ – Auth validation, role checks.
+
+sockets/socketHandler.js – WebSocket events and listeners.
+
+config/ – Database connection and email configuration.
+
+🎨 Frontend
+📌 Technologies Used:
+React.js (Next.js 13 App Router)
+
+Tailwind CSS
+
+Formik (for form handling)
+
+Framer Motion (for animations)
+
+Lottie Files (for animated JSON-based loaders)
+
+Socket.io-client (real-time sync)
+
+Fetch API for HTTP requests
+
+🧩 Key Pages/Components:
+src/app/login/page.jsx – Login screen with animation
+
+src/app/signup/page.jsx – User registration
+
+src/app/dashboard/ – Main dashboard
+
+TaskForm – Add/edit tasks
+
+TaskTable – View assigned tasks
+
+NotificationBell – Realtime notifications
+
+Navbar – Navigation and logout
+
+src/app/admin/page.jsx – Admin dashboard
+
+src/app/manager/page.jsx – Manager dashboard
+
+src/app/lib/socket.js – WebSocket client instance
+
+🧪 How to Run Locally
+🔧 Backend
+Clone the backend repo:
+
+bash
+Copy
+Edit
+git clone https://github.com/pujith20/task-manager-backend
+cd task-manager-backend
+Install dependencies:
+bcryptjs
+cors
+crypto
+dotenv
+express
+jsonwebtoken
+mongoose
+morgan
+nodemailer
+socket
+
+
+bash
+Copy
+Edit
+npm install
+Create .env file with:
+
+ini
+Copy
+Edit
+PORT=3001
+MONGO_URL=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+EMAIL_USER=your_email@gmail.com
+EMAIL_PASS=your_email_app_password
+CLIENT_URL=http://localhost:3000
+Run:
+
+bash
+Copy
+Edit
+node server.js
+🖥️ Frontend
+Clone the frontend repo:
+
+bash
+Copy
+Edit
+git clone https://github.com/pujith20/task-manager-frontend
+cd task-manager-frontend
+Install dependencies:
+
+bash
+Copy
+Edit
+npm install
+Start the dev server:
+
+bash
+Copy
+Edit
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+App will be available at: http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🙏 Thank You Note
+Thank you for visiting the Task Manager application!
+This project was built with passion and attention to detail to demonstrate full-stack application skills and real-time collaboration features.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you encounter any issues or would like to collaborate, feel free to reach out. Your feedback is highly appreciated!
