@@ -1,5 +1,9 @@
 📝 Task Manager – Project Documentation
+
+
+
 🔍 Project Overview
+
 Task Manager is a full-stack web application designed to simplify task assignment and management across different user roles like Admin and Manager. It provides real-time updates, a structured dashboard, and essential tools for task tracking and team coordination. The system uses a clean UI with animation support and secure backend integrations.
 
 🚀 Live Deployment
