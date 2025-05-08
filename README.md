@@ -121,10 +121,15 @@ Create .env file with:
 
 
 PORT=3001
+
 MONGO_URL=your_mongodb_uri
+
 JWT_SECRET=your_jwt_secret
+
 EMAIL_USER=your_email@gmail.com
+
 EMAIL_PASS=your_email_app_password
+
 CLIENT_URL=http://localhost:3000
 
 Run:
