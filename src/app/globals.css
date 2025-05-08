@@ -24,6 +24,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body.dark-mode {
+  background-color: #000000;
+  color: #ffffff; /* Optional: set text color */
+}
+
+
 * {
   box-sizing: border-box;
   padding: 0;
