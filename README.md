@@ -60,7 +60,9 @@ sockets/socketHandler.js – WebSocket events and listeners.
 config/ – Database connection and email configuration.
 
 🎨 Frontend
+
 📌 Technologies Used:
+
 React.js (Next.js 13 App Router)
 
 Tailwind CSS
@@ -86,7 +88,7 @@ TaskForm – Add/edit tasks
 
 TaskTable – View assigned tasks
 
-NotificationBell – Realtime notifications
+NotificationBell – Real-time notifications
 
 Navbar – Navigation and logout
 
@@ -96,50 +98,59 @@ src/app/manager/page.jsx – Manager dashboard
 
 src/app/lib/socket.js – WebSocket client instance
 
-🧪 How to Run Locally
-🔧 Backend
-Clone the backend repo:
+Admin Credentials:
 
-git clone https://github.com/pujith20/task-manager-backend
-cd task-manager-backend
+Username: admin123
+
+Password: admin@123
+
+
+🖥️ Frontend
+
+Clone the frontend repo:
+
+git clone https://github.com/pujith20/task-manager-frontend
+
+cd task-manager-frontend
+
 Install dependencies:
-bcryptjs
-cors
-crypto
-dotenv
-express
-jsonwebtoken
-mongoose
-morgan
-nodemailer
-socket
 
+@emotions/react
+
+@emotions/styled
+
+@mui/iocns-material
+
+@mui/material
+
+date-fns
+
+date-fns-tz
+
+lottie-react
+
+lucide-react
+
+next
+
+react
+
+react-toastiyfy
+
+react-dom
+
+socket.io-client
 
 npm install
 
-Create .env file with:
+
+Start the dev server:
+
+npm run dev
+
+App will be available at: http://localhost:3000
 
 
-PORT=3001
-
-MONGO_URL=your_mongodb_uri
-
-JWT_SECRET=your_jwt_secret
-
-EMAIL_USER=your_email@gmail.com
-
-EMAIL_PASS=your_email_app_password
-
-CLIENT_URL=http://localhost:3000
-
-Run:
-
-node server.js /  nodemon server.js / npm run dev
-
-
-Frontend Repository is at: https://github.com/pujith20/task-manager-frontend
-
-Admin credentials are given in the README.md file at the frontend repository 
 
 🙏 Thank You Note
 Thank you for visiting the Task Manager application!
