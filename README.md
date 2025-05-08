@@ -100,9 +100,6 @@ src/app/lib/socket.js – WebSocket client instance
 🔧 Backend
 Clone the backend repo:
 
-bash
-Copy
-Edit
 git clone https://github.com/pujith20/task-manager-backend
 cd task-manager-backend
 Install dependencies:
@@ -118,48 +115,26 @@ nodemailer
 socket
 
 
-bash
-Copy
-Edit
 npm install
+
 Create .env file with:
 
-ini
-Copy
-Edit
+
 PORT=3001
 MONGO_URL=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
 EMAIL_USER=your_email@gmail.com
 EMAIL_PASS=your_email_app_password
 CLIENT_URL=http://localhost:3000
+
 Run:
 
-bash
-Copy
-Edit
-node server.js
-🖥️ Frontend
-Clone the frontend repo:
+node server.js /  nodemon server.js / npm run dev
 
-bash
-Copy
-Edit
-git clone https://github.com/pujith20/task-manager-frontend
-cd task-manager-frontend
-Install dependencies:
 
-bash
-Copy
-Edit
-npm install
-Start the dev server:
+Frontend Repository is at: https://github.com/pujith20/task-manager-frontend
 
-bash
-Copy
-Edit
-npm run dev
-App will be available at: http://localhost:3000
+Admin credentials are given in the README.md file at the frontend repository 
 
 🙏 Thank You Note
 Thank you for visiting the Task Manager application!
