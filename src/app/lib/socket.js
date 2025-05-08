@@ -4,7 +4,7 @@ let socket;
 
 const getSocket = () => {
   if (!socket) {
-    socket = io("http://localhost:3001", { 
+    socket = io("https://task-manager-backend-emo1.onrender.com", { 
       withCredentials: true,
       // Add these options if you encounter CORS issues:
       transports: ['websocket', 'polling'], // Use both transports

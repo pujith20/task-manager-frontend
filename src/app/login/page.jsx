@@ -115,7 +115,7 @@ export default function LoginForm() {
       return;
     }
     try {
-      const response = await fetch("http://localhost:3001/api/auth/login", {
+      const response = await fetch("https://task-manager-backend-emo1.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -145,7 +145,7 @@ export default function LoginForm() {
     }
     try {
       const res = await fetch(
-        "http://localhost:3001/api/auth/forgot-password",
+        "https://task-manager-backend-emo1.onrender.com/api/auth/forgot-password",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -168,7 +168,7 @@ export default function LoginForm() {
 
   const handleSendOTP = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/auth/request-reset", {
+      const res = await fetch("https://task-manager-backend-emo1.onrender.com/api/auth/request-reset", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
@@ -187,7 +187,7 @@ export default function LoginForm() {
 
   const handleVerifyOTP = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/auth/verify-otp", {
+      const res = await fetch("https://task-manager-backend-emo1.onrender.com/api/auth/verify-otp", {
         //changed the route
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -213,7 +213,7 @@ export default function LoginForm() {
       return;
     }
     try {
-      const res = await fetch("http://localhost:3001/api/auth/reset-password", {
+      const res = await fetch("https://task-manager-backend-emo1.onrender.com/api/auth/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, otp, newPassword }),
@@ -227,7 +227,7 @@ export default function LoginForm() {
       toast.success("Password reset successful! Logging in.............");
       setForgotPassword(false);
       setOtpSent(false);
-      const loginRes = await fetch("http://localhost:3001/api/auth/login", {
+      const loginRes = await fetch("https://task-manager-backend-emo1.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: email, password: newPassword }), // Changed to email

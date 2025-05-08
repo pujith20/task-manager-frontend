@@ -123,7 +123,7 @@ const AdminComponent = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("jwtToken");
-      const res = await fetch("http://localhost:3001/api/tasks", {
+      const res = await fetch("https://task-manager-backend-emo1.onrender.com/api/tasks", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -146,7 +146,7 @@ const AdminComponent = () => {
   // Fetch users
   const fetchUsers = useCallback(async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/auth/", {
+      const res = await fetch("https://task-manager-backend-emo1.onrender.com/api/auth/", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -199,7 +199,7 @@ const AdminComponent = () => {
     try {
       const token = localStorage.getItem("jwtToken");
       const res = await fetch(
-        `http://localhost:3001/api/tasks/update/${selectedTask._id}`,
+        `https://task-manager-backend-emo1.onrender.com/api/tasks/update/${selectedTask._id}`,
         {
           method: "PUT",
           headers: {
@@ -245,7 +245,7 @@ const AdminComponent = () => {
     try {
       const token = localStorage.getItem("jwtToken");
       const res = await fetch(
-        `http://localhost:3001/api/tasks/update/${selectedTaskId}`,
+        `https://task-manager-backend-emo1.onrender.com/api/tasks/update/${selectedTaskId}`,
         {
           method: "PUT",
           headers: {
@@ -281,7 +281,7 @@ const AdminComponent = () => {
   const handleCreateTask = async () => {
     const token = localStorage.getItem("jwtToken");
     try {
-      const response = await fetch("http://localhost:3001/api/tasks/create", {
+      const response = await fetch("https://task-manager-backend-emo1.onrender.com/api/tasks/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -359,7 +359,7 @@ const AdminComponent = () => {
     try {
       const token = localStorage.getItem("jwtToken");
       const res = await fetch(
-        `http://localhost:3001/api/tasks/delete/${taskToDelete._id}`,
+        `https://task-manager-backend-emo1.onrender.com/api/tasks/delete/${taskToDelete._id}`,
         {
           method: "DELETE",
           headers: {
@@ -410,7 +410,7 @@ const AdminComponent = () => {
     try {
       const token = localStorage.getItem("jwtToken");
       const res = await fetch(
-        `http://localhost:3001/api/auth/update/${selectedUser._id}`,
+        `https://task-manager-backend-emo1.onrender.com/api/auth/update/${selectedUser._id}`,
         {
           method: "PUT",
           headers: {
@@ -440,7 +440,7 @@ const AdminComponent = () => {
     try {
       const token = localStorage.getItem("jwtToken");
       const res = await fetch(
-        `http://localhost:3001/api/auth/delete/${userId}`,
+        `https://task-manager-backend-emo1.onrender.com/api/auth/delete/${userId}`,
         {
           method: "DELETE",
           headers: {

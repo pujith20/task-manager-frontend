@@ -29,7 +29,7 @@ const TaskForm = ({ task, onSave, onCancel }) => {
   const socket = getSocket();
 
   useEffect(() => {
-    fetch("http://localhost:3001/api/auth/")
+    fetch("https://task-manager-backend-emo1.onrender.com/api/auth/")
       .then((res) => res.json())
       .then((data) => setUsers(data))
       .catch((err) => console.error("Error fetching users:", err));
@@ -59,7 +59,7 @@ const TaskForm = ({ task, onSave, onCancel }) => {
   const handleSubmit = async () => {
     const token = localStorage.getItem("jwtToken");
     try {
-      const response = await fetch("http://localhost:3001/api/tasks/create", {
+      const response = await fetch("https://task-manager-backend-emo1.onrender.com/api/tasks/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

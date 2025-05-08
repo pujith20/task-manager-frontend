@@ -18,7 +18,7 @@ const NotificationBell = () => {
   const fetchNotifications = async (anchorTarget) => {
     try {
       const token = localStorage.getItem("jwtToken");
-      const res = await fetch("http://localhost:3001/api/notifications/", {
+      const res = await fetch("https://task-manager-backend-emo1.onrender.com/api/notifications/", {
         credentials: "include",
         headers: {
           // Add the Authorization header

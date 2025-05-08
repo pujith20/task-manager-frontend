@@ -62,7 +62,7 @@ const Dashboard = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3001/api/tasks?category=${selectedCategory}&userId=${userId}`,
+        `https://task-manager-backend-emo1.onrender.com/api/tasks?category=${selectedCategory}&userId=${userId}`,
         {
           method: "GET",
           headers: {
@@ -117,7 +117,7 @@ const Dashboard = () => {
   const fetchLogs = async () => {
     try {
       const token = localStorage.getItem("jwtToken");
-      const res = await fetch("http://localhost:3001/api/logs", {
+      const res = await fetch("https://task-manager-backend-emo1.onrender.com/api/logs", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -132,7 +132,7 @@ const Dashboard = () => {
   const logAction = async (action) => {
     try {
       const token = localStorage.getItem("jwtToken");
-      await fetch("http://localhost:3001/api/logs", {
+      await fetch("https://task-manager-backend-emo1.onrender.com/api/logs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
